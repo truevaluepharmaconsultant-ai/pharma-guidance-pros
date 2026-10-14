@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import hero from "@/assets/hero.jpg";
+import { HeroSlider } from "@/components/HeroSlider";
 import { SiteLayout } from "@/components/SiteLayout";
 import { services, strengths } from "@/lib/site";
 
@@ -20,19 +20,8 @@ const stats = [["35+", "Years of industry experience"], ["9+", "Major consultanc
 function Index() {
   return (
     <SiteLayout>
-      <section className="relative overflow-hidden">
-        <img src={hero} alt="Pharmaceutical cleanroom plant" width={1600} height={912} className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-ink/80" />
-        <div className="relative mx-auto max-w-6xl px-6 py-28 md:py-36 text-primary-foreground">
-          <p className="text-accent text-sm font-semibold uppercase tracking-widest">Your trusted partner in pharmaceutical excellence</p>
-          <h1 className="mt-4 max-w-3xl text-4xl md:text-6xl font-bold leading-tight">From concept to compliance.</h1>
-          <p className="mt-6 max-w-xl text-lg opacity-85">Engineering, regulatory, quality assurance and compliance consultancy for pharmaceutical, API, excipient, packaging, nutraceutical and veterinary manufacturers.</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/contact" className="rounded-md bg-accent px-6 py-3 font-semibold text-accent-foreground hover:opacity-90">Discuss your project</Link>
-            <Link to="/projects" className="rounded-md border border-primary-foreground/40 px-6 py-3 font-semibold hover:bg-primary-foreground/10">See our projects</Link>
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
+
 
       <section className="border-b bg-card">
         <div className="mx-auto max-w-6xl px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6">
