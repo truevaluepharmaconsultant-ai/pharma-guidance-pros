@@ -1,34 +1,44 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import hero from "@/assets/hero.jpg";
 import { SiteLayout } from "@/components/SiteLayout";
-import { services } from "@/lib/site";
+import { services, strengths } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "True Value Pharma Consultant — Pharma Plant & GMP Consulting" },
-      { name: "description", content: "Greenfield pharma projects, plant modernization, WHO-GMP, Revised Schedule M, FAMI-QS, plant engineering and QMS consulting." },
+      { title: "True Value Pharma Consultant — Pharma Plant & GMP Consulting, Vapi" },
+      { name: "description", content: "35+ years of experience in greenfield pharma projects, plant modernization, WHO-GMP, Revised Schedule M, ISO 15378, FAMI-QS and QMS consulting." },
       { property: "og:title", content: "True Value Pharma Consultant" },
-      { property: "og:description", content: "Expert consulting for compliant pharmaceutical plants: WHO-GMP, Revised Schedule M, FAMI-QS." },
+      { property: "og:description", content: "Your trusted partner in pharmaceutical excellence — from concept to compliance." },
     ],
   }),
   component: Index,
 });
+
+const stats = [["35+", "Years of industry experience"], ["9+", "Major consultancy projects"], ["6", "Industry sectors served"], ["1987", "B.Pharm, L.M. College of Pharmacy"]];
 
 function Index() {
   return (
     <SiteLayout>
       <section className="relative overflow-hidden">
         <img src={hero} alt="Pharmaceutical cleanroom plant" width={1600} height={912} className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-ink/75" />
-        <div className="relative mx-auto max-w-6xl px-6 py-28 md:py-40 text-primary-foreground">
-          <p className="text-accent text-sm font-semibold uppercase tracking-widest">Pharmaceutical Plant Consultants</p>
-          <h1 className="mt-4 max-w-3xl text-4xl md:text-6xl font-bold leading-tight">Building compliant pharma plants, from blueprint to approval.</h1>
-          <p className="mt-6 max-w-xl text-lg opacity-85">Greenfield projects, modernization, and regulatory readiness for WHO-GMP, Revised Schedule M and FAMI-QS.</p>
+        <div className="absolute inset-0 bg-ink/80" />
+        <div className="relative mx-auto max-w-6xl px-6 py-28 md:py-36 text-primary-foreground">
+          <p className="text-accent text-sm font-semibold uppercase tracking-widest">Your trusted partner in pharmaceutical excellence</p>
+          <h1 className="mt-4 max-w-3xl text-4xl md:text-6xl font-bold leading-tight">From concept to compliance.</h1>
+          <p className="mt-6 max-w-xl text-lg opacity-85">Engineering, regulatory, quality assurance and compliance consultancy for pharmaceutical, API, excipient, packaging, nutraceutical and veterinary manufacturers.</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/contact" className="rounded-md bg-accent px-6 py-3 font-semibold text-accent-foreground hover:opacity-90">Discuss your project</Link>
-            <Link to="/services" className="rounded-md border border-primary-foreground/40 px-6 py-3 font-semibold hover:bg-primary-foreground/10">Our expertise</Link>
+            <Link to="/projects" className="rounded-md border border-primary-foreground/40 px-6 py-3 font-semibold hover:bg-primary-foreground/10">See our projects</Link>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b bg-card">
+        <div className="mx-auto max-w-6xl px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+          {stats.map(([n, l]) => (
+            <div key={l}><p className="font-display text-4xl font-bold text-primary">{n}</p><p className="mt-1 text-sm text-muted-foreground">{l}</p></div>
+          ))}
         </div>
       </section>
 
@@ -45,9 +55,26 @@ function Index() {
         </div>
       </section>
 
+      <section className="bg-secondary">
+        <div className="mx-auto max-w-6xl px-6 py-20 grid gap-10 md:grid-cols-2">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold">Why clients trust us</h2>
+            <blockquote className="mt-6 border-l-4 border-accent pl-5 text-lg italic text-ink">
+              "We don't just provide consultancy; we become your project partner, guiding you from concept to compliance with integrity, professionalism, and practical expertise."
+            </blockquote>
+            <Link to="/about" className="mt-6 inline-block font-semibold text-primary hover:underline">Meet our founder →</Link>
+          </div>
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {strengths.map((s) => (
+              <li key={s} className="flex gap-2 rounded-md bg-card p-3 text-sm"><span className="text-accent font-bold">✓</span>{s}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <section className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-6xl px-6 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <h2 className="text-3xl font-bold max-w-xl">Planning a new plant or an upgrade to meet Revised Schedule M?</h2>
+          <h2 className="text-3xl font-bold max-w-xl">Planning a new plant or upgrading to Revised Schedule M? Let's build quality together.</h2>
           <Link to="/contact" className="rounded-md bg-accent px-6 py-3 font-semibold text-accent-foreground">Get in touch</Link>
         </div>
       </section>
