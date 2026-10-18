@@ -36,7 +36,7 @@ function Services() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">Engineering & facility design</p>
             <h2 className="mt-3 text-3xl font-bold text-ink">Clean room & HVAC consultancy</h2>
-            <CheckList items={serviceGroups[1].items} />
+            <CheckList items={serviceGroups[1]?.items ?? []} />
           </div>
         </div>
       </section>
