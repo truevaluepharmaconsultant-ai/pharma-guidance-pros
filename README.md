@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Pharma Guidance Pros
+
+Create a website for my business named True Value Pharma Consultant Core Expertise in Greenfield Pharmaceutical projects, Plant modification & mordernization, Plants as per guidline of WHO-GMP, Revised Schedule M, FAMI-QS, Plant Engineering, Regulatory Compliance, Quality Management systems
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://pharma-guidance-pros.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/157a4056-ea3a-57c8-94b2-abb61c27449d).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
