@@ -2,6 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { HeroSlider } from "@/components/HeroSlider";
 import { SiteLayout } from "@/components/SiteLayout";
 import { services, strengths } from "@/lib/site";
+import exhibitionWide from "@/assets/true-value-exhibition-wide.jpg";
+import exhibition from "@/assets/true-value-exhibition.jpg";
+import founder from "@/assets/true-value-founder-final.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -10,6 +13,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "35+ years of experience in greenfield pharma projects, plant modernization, WHO-GMP, Revised Schedule M, ISO 15378, FAMI-QS and QMS consulting." },
       { property: "og:title", content: "True Value Pharma Consultant" },
       { property: "og:description", content: "Your trusted partner in pharmaceutical excellence — from concept to compliance." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -41,6 +46,20 @@ function Index() {
               <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="border-t">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary">True Value Pharma Consultant</p>
+          <h2 className="mt-2 text-3xl md:text-4xl font-bold">Industry gallery</h2>
+          <div className="mt-8 grid gap-6 sm:grid-cols-3">
+            {[exhibitionWide, exhibition, founder].map((photo, i) => (
+              <figure key={photo}>
+                <img src={photo} alt={`Mr. Divyesh Shah at a clean room exhibition display with True Value branding — photo ${i + 1}`} width={768} height={1029} loading="lazy" className="aspect-[3/4] w-full rounded-md object-contain bg-secondary" />
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
