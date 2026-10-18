@@ -9,6 +9,8 @@ export const Route = createFileRoute("/approach")({
       { name: "description", content: "Our six-phase project methodology from requirement study to certification readiness, and our strategic partners." },
       { property: "og:title", content: "Project Execution Methodology" },
       { property: "og:description", content: "From concept to compliance — a structured six-phase approach." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Approach,

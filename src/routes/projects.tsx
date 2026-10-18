@@ -9,6 +9,8 @@ export const Route = createFileRoute("/projects")({
       { name: "description", content: "Greenfield, WHO-GMP, Revised Schedule M, ISO 15378 and FAMI-QS projects across Vapi, Silvassa, Sarigam and Valsad." },
       { property: "og:title", content: "Major Consultancy Projects" },
       { property: "og:description", content: "Success stories from pharmaceutical, API, excipient, packaging and veterinary clients." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Projects,

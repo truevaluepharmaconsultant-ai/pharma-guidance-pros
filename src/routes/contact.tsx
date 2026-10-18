@@ -10,6 +10,8 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Contact Mr. Divyesh Shah: +91 98250 77025, truevaluepharmaconsultant@gmail.com, Chala, Vapi, Gujarat." },
       { property: "og:title", content: "Contact True Value Pharma Consultant" },
       { property: "og:description", content: "Let's build quality together — discuss your pharmaceutical plant or compliance project." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Contact,

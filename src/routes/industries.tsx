@@ -9,6 +9,8 @@ export const Route = createFileRoute("/industries")({
       { name: "description", content: "Consultancy for pharmaceutical formulations, veterinary healthcare, nutraceuticals, API & excipients and primary packaging materials." },
       { property: "og:title", content: "Industries We Serve" },
       { property: "og:description", content: "Regulated and allied industries supported by True Value Pharma Consultant." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Industries,
