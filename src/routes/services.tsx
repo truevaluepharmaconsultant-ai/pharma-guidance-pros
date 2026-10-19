@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Reveal } from "@/components/Reveal";
 import { CheckList, PageHeader, SiteLayout } from "@/components/SiteLayout";
 import { Button } from "@/components/ui/button";
 import { serviceGroups } from "@/lib/site";
@@ -52,16 +53,18 @@ function Services() {
       </section>
       <section className="mx-auto max-w-6xl px-6 py-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {serviceGroups.map((g, i) => (
-          <div key={g.title} className="rounded-lg border bg-card p-6">
-            <span className="font-display text-3xl font-bold text-accent">{String(i + 1).padStart(2, "0")}</span>
-            <h2 className="mt-2 text-xl font-bold text-ink">{g.title}</h2>
-            <CheckList items={g.items} />
-          </div>
+          <Reveal key={g.title} delay={(i % 3) * 100}>
+            <div className="card-hover h-full rounded-lg border bg-card p-6">
+              <span className="font-display text-3xl font-bold text-accent">{String(i + 1).padStart(2, "0")}</span>
+              <h2 className="mt-2 text-xl font-bold text-ink">{g.title}</h2>
+              <CheckList items={g.items} />
+            </div>
+          </Reveal>
         ))}
       </section>
       <section className="bg-secondary">
         <div className="mx-auto max-w-6xl grid items-center gap-10 px-6 py-16 md:grid-cols-2">
-          <img src={exhibitionWide} alt="Mr. Divyesh Shah alongside a clean room display with True Value branding" width={768} height={1029} loading="lazy" className="mx-auto aspect-[3/4] w-full max-w-sm rounded-md object-contain" />
+          <img src={exhibitionWide} alt="Mr. Divyesh Shah alongside a clean room display with True Value branding" width={768} height={1029} loading="lazy" className="img-hover mx-auto aspect-[3/4] w-full max-w-sm rounded-md object-contain" />
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">Engineering & facility design</p>
             <h2 className="mt-3 text-3xl font-bold text-ink">Clean room & HVAC consultancy</h2>

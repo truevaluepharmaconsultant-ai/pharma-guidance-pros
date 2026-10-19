@@ -71,16 +71,18 @@ function Index() {
 
       <section className="bg-secondary">
         <div className="mx-auto max-w-6xl px-6 py-20 grid gap-10 md:grid-cols-2">
-          <div>
+          <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold">Why clients trust us</h2>
             <blockquote className="mt-6 border-l-4 border-accent pl-5 text-lg italic text-ink">
               "We don't just provide consultancy; we become your project partner, guiding you from concept to compliance with integrity, professionalism, and practical expertise."
             </blockquote>
             <Link to="/about" className="mt-6 inline-block font-semibold text-primary hover:underline">Meet our founder →</Link>
-          </div>
+          </Reveal>
           <ul className="grid gap-3 sm:grid-cols-2">
-            {strengths.map((s) => (
-              <li key={s} className="flex gap-2 rounded-md bg-card p-3 text-sm"><span className="text-accent font-bold">✓</span>{s}</li>
+            {strengths.map((s, i) => (
+              <Reveal key={s} delay={i * 60}>
+                <li className="card-hover flex h-full gap-2 rounded-md border bg-card p-3 text-sm"><span className="text-accent font-bold">✓</span>{s}</li>
+              </Reveal>
             ))}
           </ul>
         </div>
