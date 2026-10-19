@@ -31,8 +31,8 @@ function About() {
           <p className="text-muted-foreground">We partner with clients from project concept through regulatory compliance, delivering practical, technically sound and sustainable solutions that improve product quality, operational efficiency and inspection readiness.</p>
         </div>
         <div className="space-y-6">
-          <div className="border-l-4 border-accent pl-4"><h2 className="text-xl font-bold text-ink">Vision</h2><p className="text-muted-foreground">To become one of India's most trusted pharmaceutical consultancy organizations by delivering innovative, practical and regulatory-compliant solutions that create long-term value for our clients.</p></div>
-          <div className="border-l-4 border-accent pl-4"><h2 className="text-xl font-bold text-ink">Mission</h2><p className="text-muted-foreground">To support pharmaceutical and allied industries through technical excellence, regulatory expertise and customer-focused consultancy, enabling operational excellence and sustainable business growth.</p></div>
+          <Reveal><div className="card-hover rounded-r-lg border-l-4 border-accent bg-card p-4"><h2 className="text-xl font-bold text-ink">Vision</h2><p className="text-muted-foreground">To become one of India's most trusted pharmaceutical consultancy organizations by delivering innovative, practical and regulatory-compliant solutions that create long-term value for our clients.</p></div></Reveal>
+          <Reveal delay={100}><div className="card-hover rounded-r-lg border-l-4 border-accent bg-card p-4"><h2 className="text-xl font-bold text-ink">Mission</h2><p className="text-muted-foreground">To support pharmaceutical and allied industries through technical excellence, regulatory expertise and customer-focused consultancy, enabling operational excellence and sustainable business growth.</p></div></Reveal>
           <div>
             <h2 className="text-xl font-bold text-ink">Core Values</h2>
             <div className="mt-3 flex flex-wrap gap-2">{values.map((v) => <span key={v} className="rounded-full bg-secondary px-4 py-1.5 text-sm font-semibold text-primary">{v}</span>)}</div>
