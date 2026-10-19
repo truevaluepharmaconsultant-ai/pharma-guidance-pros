@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Reveal } from "@/components/Reveal";
 import { CheckList, PageHeader, SiteLayout } from "@/components/SiteLayout";
 import { partners, phases } from "@/lib/site";
 
@@ -25,10 +26,12 @@ function Approach() {
       <section className="mx-auto max-w-6xl px-6 py-16">
         <ol className="grid gap-4 md:grid-cols-3 lg:grid-cols-6">
           {phases.map((p, i) => (
-            <li key={p} className="rounded-lg border-t-4 border-accent bg-card p-5 shadow-sm">
-              <p className="text-xs font-bold uppercase tracking-widest text-primary">Phase {i + 1}</p>
-              <p className="mt-2 font-semibold text-ink">{p}</p>
-            </li>
+            <Reveal key={p} delay={i * 80}>
+              <li className="card-hover h-full rounded-lg border-t-4 border-accent bg-card p-5 shadow-sm">
+                <p className="text-xs font-bold uppercase tracking-widest text-primary">Phase {i + 1}</p>
+                <p className="mt-2 font-semibold text-ink">{p}</p>
+              </li>
+            </Reveal>
           ))}
         </ol>
       </section>
@@ -36,10 +39,14 @@ function Approach() {
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-3xl font-bold">Strategic partnerships</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {partners.map((p) => (
-              <div key={p.name} className="rounded-lg bg-card p-6"><h3 className="text-lg font-bold text-ink">{p.name}</h3><CheckList items={p.items} /></div>
+            {partners.map((p, i) => (
+              <Reveal key={p.name} delay={i * 80}>
+                <div className="card-hover h-full rounded-lg border bg-card p-6"><h3 className="text-lg font-bold text-ink">{p.name}</h3><CheckList items={p.items} /></div>
+              </Reveal>
             ))}
-            <div className="rounded-lg bg-card p-6"><h3 className="text-lg font-bold text-ink">Documentation Support Team</h3><CheckList items={docs} /></div>
+            <Reveal delay={partners.length * 80}>
+              <div className="card-hover h-full rounded-lg border bg-card p-6"><h3 className="text-lg font-bold text-ink">Documentation Support Team</h3><CheckList items={docs} /></div>
+            </Reveal>
           </div>
         </div>
       </section>

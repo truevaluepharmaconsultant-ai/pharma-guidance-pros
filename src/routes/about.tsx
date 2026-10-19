@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Reveal } from "@/components/Reveal";
 import { PageHeader, SiteLayout } from "@/components/SiteLayout";
 import founder from "@/assets/true-value-founder-final.jpg";
 
@@ -42,7 +43,7 @@ function About() {
       <section className="bg-secondary">
         <div className="mx-auto max-w-6xl px-6 py-16 grid gap-10 md:grid-cols-3">
           <div>
-            <img src={founder} alt="Mr. Divyesh Shah, founder of True Value Pharma Consultant" width={768} height={1029} loading="lazy" className="mb-6 aspect-[3/4] w-full rounded-md object-contain" />
+            <img src={founder} alt="Mr. Divyesh Shah, founder of True Value Pharma Consultant" width={768} height={1029} loading="lazy" className="img-hover mb-6 aspect-[3/4] w-full rounded-md object-contain" />
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">Founder profile</p>
             <h2 className="mt-2 text-3xl font-bold">Mr. Divyesh Shah</h2>
             <p className="mt-1 font-semibold text-ink">Founder & Principal Pharmaceutical Consultant</p>
