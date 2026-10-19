@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Reveal } from "@/components/Reveal";
 import { CheckList, PageHeader, SiteLayout } from "@/components/SiteLayout";
 import { industries } from "@/lib/site";
 
@@ -24,11 +25,13 @@ function Industries() {
     <SiteLayout>
       <PageHeader eyebrow="Industries we serve" title="Regulated and allied industries" />
       <section className="mx-auto max-w-6xl px-6 py-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {industries.map((g) => (
-          <div key={g.title} className="rounded-lg border bg-card p-6">
-            <h2 className="text-xl font-bold text-ink">{g.title}</h2>
-            <CheckList items={g.items} />
-          </div>
+        {industries.map((g, i) => (
+          <Reveal key={g.title} delay={(i % 3) * 100}>
+            <div className="card-hover h-full rounded-lg border bg-card p-6">
+              <h2 className="text-xl font-bold text-ink">{g.title}</h2>
+              <CheckList items={g.items} />
+            </div>
+          </Reveal>
         ))}
       </section>
       <section className="bg-secondary">

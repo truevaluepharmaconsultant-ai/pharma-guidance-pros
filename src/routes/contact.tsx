@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { Reveal } from "@/components/Reveal";
 import { PageHeader, SiteLayout } from "@/components/SiteLayout";
 import { contact } from "@/lib/site";
 import digitalCard from "@/assets/true-value-digital-card.png.asset.json";
@@ -25,26 +26,28 @@ function Contact() {
     <SiteLayout>
       <PageHeader eyebrow="Contact" title="Let's build quality together" sub="Planning a new facility, upgrading a plant, or implementing WHO-GMP, ISO 15378, FAMI-QS or a QMS? We're ready to support you." />
       <section className="mx-auto max-w-6xl px-6 py-16 grid gap-12 md:grid-cols-2">
-        <div className="space-y-5">
+        <Reveal className="space-y-5">
           <a href={digitalCard.url} target="_blank" rel="noopener noreferrer" aria-label="View True Value Pharma Consultant digital card at full size" className="block">
-            <img src={digitalCard.url} alt="True Value Pharma Consultant digital card — Divyesh Shah, contact details, services and expertise" width={768} height={1152} className="h-auto w-full rounded-md" />
+            <img src={digitalCard.url} alt="True Value Pharma Consultant digital card — Divyesh Shah, contact details, services and expertise" width={768} height={1152} className="img-hover h-auto w-full rounded-md" />
           </a>
           <div><p className="text-xl font-bold text-ink">{contact.name}</p><p className="text-muted-foreground">{contact.role}</p></div>
           <p><span className="block text-xs font-bold uppercase tracking-widest text-primary">Office</span><a href="tel:+919825077025" className="text-lg font-semibold">{contact.phone}</a></p>
           <p><span className="block text-xs font-bold uppercase tracking-widest text-primary">Alternate</span><a href="tel:+919879952202" className="text-lg font-semibold">{contact.phoneAlt}</a></p>
           <p><span className="block text-xs font-bold uppercase tracking-widest text-primary">Email</span><a href={`mailto:${contact.email}`} className="text-lg font-semibold break-all">{contact.email}</a></p>
           <p><span className="block text-xs font-bold uppercase tracking-widest text-primary">Address</span>{contact.address}</p>
-        </div>
+        </Reveal>
         {sent ? (
           <p className="rounded-lg border bg-card p-8 text-center text-lg self-start">Thank you — we'll get back to you shortly.</p>
         ) : (
-          <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
-            <input required placeholder="Your name" className={input} />
-            <input required type="email" placeholder="Email" className={input} />
-            <input placeholder="Company" className={input} />
-            <textarea required rows={5} placeholder="Project details" className={input} />
-            <button className="rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground hover:opacity-90">Send enquiry</button>
-          </form>
+          <Reveal delay={120}>
+            <form className="space-y-4 rounded-lg border bg-card p-6 shadow-sm" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
+              <input required placeholder="Your name" className={input} />
+              <input required type="email" placeholder="Email" className={input} />
+              <input placeholder="Company" className={input} />
+              <textarea required rows={5} placeholder="Project details" className={input} />
+              <button className="rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground transition hover:opacity-90">Send enquiry</button>
+            </form>
+          </Reveal>
         )}
       </section>
     </SiteLayout>

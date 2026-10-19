@@ -54,7 +54,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         )}
       </header>
       <main className="flex-1">{children}</main>
-      <footer className="bg-ink text-primary-foreground">
+      <footer className="border-t-4 border-accent bg-ink text-primary-foreground">
         <div className="mx-auto max-w-6xl px-6 py-12 grid gap-8 md:grid-cols-3">
           <div>
             <p className="font-display text-lg font-bold">True Value Pharma Consultant</p>
@@ -74,11 +74,14 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
 export function PageHeader({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) {
   return (
-    <section className="bg-ink text-primary-foreground">
-      <div className="mx-auto max-w-6xl px-6 py-16">
-        <p className="text-accent text-sm font-semibold uppercase tracking-widest">{eyebrow}</p>
-        <h1 className="mt-3 text-4xl md:text-5xl font-bold">{title}</h1>
-        {sub && <p className="mt-4 max-w-2xl opacity-80">{sub}</p>}
+    <section className="relative overflow-hidden bg-ink text-primary-foreground">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,color-mix(in_oklab,var(--accent)_16%,transparent),transparent_60%)]" />
+      <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[color-mix(in_oklab,var(--primary)_35%,transparent)] blur-3xl" />
+      <div className="relative mx-auto max-w-6xl px-6 py-20">
+        <p className="text-accent text-sm font-semibold uppercase tracking-[0.25em]">{eyebrow}</p>
+        <h1 className="mt-3 max-w-3xl text-4xl md:text-5xl font-bold leading-tight">{title}</h1>
+        {sub && <p className="mt-5 max-w-2xl text-lg opacity-80">{sub}</p>}
+        <div aria-hidden="true" className="mt-8 h-1 w-16 rounded-full bg-accent" />
       </div>
     </section>
   );
