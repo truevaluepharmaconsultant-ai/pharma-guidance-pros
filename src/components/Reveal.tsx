@@ -10,7 +10,7 @@ export function Reveal({ children, className = "", delay = 0 }: { children: Reac
     if (!el) return;
     const obs = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry?.isIntersecting) {
           setVisible(true);
           obs.disconnect();
         }
