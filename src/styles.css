@@ -62,6 +62,8 @@
   --font-display: "Fraunces", serif;
   --font-sans: "Manrope", sans-serif;
   --color-ink: var(--ink);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
 }
 
 :root {
@@ -91,6 +93,8 @@
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --ink: oklch(0.22 0.04 220);
+  --whatsapp: oklch(0.72 0.19 145);
+  --whatsapp-foreground: oklch(0.99 0.01 150);
   --sidebar: oklch(0.984 0.003 247.858);
   --sidebar-foreground: oklch(0.129 0.042 264.695);
   --sidebar-primary: oklch(0.208 0.042 265.755);
@@ -121,6 +125,8 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.551 0.027 264.364);
+  --whatsapp: oklch(0.72 0.19 145);
+  --whatsapp-foreground: oklch(0.99 0.01 150);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -178,4 +184,17 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-text-in, .hero-text-in-d1, .hero-text-in-d2, .hero-progress { animation: none; }
   .card-hover:hover, .img-hover:hover { transform: none; }
+  .wa-pulse { animation: none; opacity: 0; }
+}
+
+/* ---- Floating WhatsApp button ---- */
+@keyframes wa-pulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  70% { transform: scale(1.35); opacity: 0; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+.wa-pulse {
+  pointer-events: none;
+  animation: wa-pulse 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
