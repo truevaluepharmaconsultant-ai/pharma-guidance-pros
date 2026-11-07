@@ -5,7 +5,6 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { services, strengths } from "@/lib/site";
 import exhibitionWide from "@/assets/true-value-exhibition-wide.jpg";
 import booth from "@/assets/true-value-booth-sofa.jpg";
-import exhibition from "@/assets/true-value-exhibition.jpg";
 import founder from "@/assets/true-value-founder-final.jpg";
 
 export const Route = createFileRoute("/")({
@@ -27,7 +26,6 @@ const stats = [["35+", "Years of industry experience"], ["9+", "Major consultanc
 const gallery = [
   { src: exhibitionWide, alt: "Mr. Divyesh Shah standing at a clean room exhibition display with True Value branding" },
   { src: booth, alt: "Mr. Divyesh Shah seated on a white sofa at the True Value exhibition booth, company logo on the backdrop" },
-  { src: exhibition, alt: "Mr. Divyesh Shah at the True Value exhibition counter with a client wall behind" },
   { src: founder, alt: "Mr. Divyesh Shah at the True Value exhibition counter with clean room equipment displays" },
 ];
 
@@ -65,7 +63,7 @@ function Index() {
         <div className="mx-auto max-w-6xl px-6 py-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">True Value Pharma Consultant</p>
           <h2 className="mt-2 text-3xl md:text-4xl font-bold">Industry gallery</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {gallery.map((photo, i) => (
               <Reveal key={photo.alt} delay={i * 120}>
                 <figure className="card-hover">
