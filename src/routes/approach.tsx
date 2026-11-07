@@ -117,9 +117,9 @@ function Approach() {
             ))}
           </div>
 
-          <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
             {widePhotos.map((photo, i) => (
-              <Reveal key={photo.caption} delay={i * 60}>
+              <Reveal key={photo.caption} delay={i * 60} className={`sm:col-span-1 ${i >= widePhotos.length - 2 ? "lg:col-span-3" : "lg:col-span-2"}`}>
                 <figure className="card-hover group relative overflow-hidden rounded-lg border bg-card shadow-sm aspect-[4/3]">
                   <img
                     src={photo.src}
