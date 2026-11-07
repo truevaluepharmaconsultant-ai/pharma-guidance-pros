@@ -4,6 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { SiteLayout } from "@/components/SiteLayout";
 import { services, strengths } from "@/lib/site";
 import exhibitionWide from "@/assets/true-value-exhibition-wide.jpg";
+import booth from "@/assets/true-value-booth-sofa.jpg";
 import exhibition from "@/assets/true-value-exhibition.jpg";
 import founder from "@/assets/true-value-founder-final.jpg";
 
