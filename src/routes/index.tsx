@@ -24,6 +24,13 @@ export const Route = createFileRoute("/")({
 
 const stats = [["35+", "Years of industry experience"], ["9+", "Major consultancy projects"], ["6", "Industry sectors served"], ["1987", "B.Pharm, L.M. College of Pharmacy"]];
 
+const gallery = [
+  { src: exhibitionWide, alt: "Mr. Divyesh Shah standing at a clean room exhibition display with True Value branding" },
+  { src: booth, alt: "Mr. Divyesh Shah seated on a white sofa at the True Value exhibition booth, company logo on the backdrop" },
+  { src: exhibition, alt: "Mr. Divyesh Shah at the True Value exhibition counter with a client wall behind" },
+  { src: founder, alt: "Mr. Divyesh Shah at the True Value exhibition counter with clean room equipment displays" },
+];
+
 function Index() {
   return (
     <SiteLayout>
