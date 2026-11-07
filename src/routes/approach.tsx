@@ -56,7 +56,7 @@ function PhotoCard({ photo, ratio }: { photo: Photo; ratio: string }) {
           loading="lazy"
           className="img-hover h-full w-full object-cover"
         />
-        <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/45 to-transparent px-4 pb-3 pt-10 text-sm font-semibold text-ink-contrast">
+        <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/45 to-transparent px-4 pb-3 pt-10 text-sm font-semibold text-primary-foreground">
           {photo.caption}
         </figcaption>
       </figure>
@@ -92,7 +92,7 @@ function Approach() {
             />
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/45 to-transparent px-6 pb-4 pt-14">
               <p className="text-xs font-bold uppercase tracking-widest text-accent">Greenfield execution</p>
-              <p className="mt-1 text-lg font-semibold text-ink-contrast">
+              <p className="mt-1 text-lg font-semibold text-primary-foreground">
                 Structural framework of a new plant — from drawings to site
               </p>
             </figcaption>
@@ -100,12 +100,12 @@ function Approach() {
         </Reveal>
       </section>
 
-      <section className="bg-secondary">
+      <section className="border-t border-border">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-widest text-primary">Facilities we deliver</p>
             <h2 className="mt-2 text-3xl font-bold text-ink">Designed, built and validated by our team</h2>
-            <p className="mt-3 max-w-3xl text-muted">
+            <p className="mt-3 max-w-3xl text-muted-foreground">
               Clean rooms, quality control laboratories and support areas delivered as part of our turnkey project
               execution — photographed on our own sites.
             </p>
@@ -127,7 +127,7 @@ function Approach() {
                     loading="lazy"
                     className="img-hover h-full w-full object-cover"
                   />
-                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/45 to-transparent px-4 pb-3 pt-10 text-sm font-semibold text-ink-contrast">
+                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/45 to-transparent px-4 pb-3 pt-10 text-sm font-semibold text-primary-foreground">
                     {photo.caption}
                   </figcaption>
                 </figure>
