@@ -3,7 +3,7 @@
 - [x] Add the photographs to relevant pages and verify their display.
 
 # Services page pictures
-- [ ] Place the three distinct uploaded pictures across the Services page and verify display.
+- [x] Place the three distinct uploaded pictures across the Services page and verify display.
 
 # Production image repair
 - [x] Place all website image files in public/images and use root-relative URLs.
