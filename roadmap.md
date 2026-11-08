@@ -4,4 +4,4 @@
 
 # Production image repair
 - [x] Place all website image files in public/images and use root-relative URLs.
-- [ ] Verify image delivery across every website page.
+- [x] Verify image delivery across every website page (all seven pages, HTTP 200, no runtime errors).
