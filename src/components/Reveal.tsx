@@ -1,7 +1,15 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 /** Fades content up into view when it scrolls into the viewport. */
-export function Reveal({ children, className = "", delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
+export function Reveal({
+  children,
+  className = "",
+  delay = 0,
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
