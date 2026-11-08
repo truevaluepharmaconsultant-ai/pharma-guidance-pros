@@ -7,9 +7,16 @@ export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
       { title: "Industries We Serve — True Value Pharma Consultant" },
-      { name: "description", content: "Consultancy for pharmaceutical formulations, veterinary healthcare, nutraceuticals, API & excipients and primary packaging materials." },
+      {
+        name: "description",
+        content:
+          "Consultancy for pharmaceutical formulations, veterinary healthcare, nutraceuticals, API & excipients and primary packaging materials.",
+      },
       { property: "og:title", content: "Industries We Serve" },
-      { property: "og:description", content: "Regulated and allied industries supported by True Value Pharma Consultant." },
+      {
+        property: "og:description",
+        content: "Regulated and allied industries supported by True Value Pharma Consultant.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -17,8 +24,23 @@ export const Route = createFileRoute("/industries")({
   component: Industries,
 });
 
-const capabilities = ["Facility Design", "WHO-GMP Compliance", "Regulatory Documentation", "ISO 15378 Implementation", "Greenfield Projects", "Plant Modification", "FAMI-QS Compliance", "GMP Upgradation"];
-const benefits = ["Practical Industry Experience", "Regulatory Expertise", "Technical Guidance", "Fast Project Execution", "Sustainable Compliance Systems"];
+const capabilities = [
+  "Facility Design",
+  "WHO-GMP Compliance",
+  "Regulatory Documentation",
+  "ISO 15378 Implementation",
+  "Greenfield Projects",
+  "Plant Modification",
+  "FAMI-QS Compliance",
+  "GMP Upgradation",
+];
+const benefits = [
+  "Practical Industry Experience",
+  "Regulatory Expertise",
+  "Technical Guidance",
+  "Fast Project Execution",
+  "Sustainable Compliance Systems",
+];
 
 function Industries() {
   return (
@@ -38,7 +60,14 @@ function Industries() {
         <div className="mx-auto max-w-6xl px-6 py-16 grid gap-10 md:grid-cols-2">
           <div>
             <h2 className="text-2xl font-bold">Key capabilities</h2>
-            <ol className="mt-4 grid grid-cols-2 gap-3">{capabilities.map((c, i) => <li key={c} className="rounded-md bg-card p-3 text-sm font-semibold"><span className="text-accent mr-2">{i + 1}.</span>{c}</li>)}</ol>
+            <ol className="mt-4 grid grid-cols-2 gap-3">
+              {capabilities.map((c, i) => (
+                <li key={c} className="rounded-md bg-card p-3 text-sm font-semibold">
+                  <span className="text-accent mr-2">{i + 1}.</span>
+                  {c}
+                </li>
+              ))}
+            </ol>
           </div>
           <div>
             <h2 className="text-2xl font-bold">Our clients benefit from</h2>

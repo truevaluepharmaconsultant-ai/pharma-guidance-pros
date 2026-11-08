@@ -11,9 +11,16 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "True Value Pharma Consultant — Pharma Plant & GMP Consulting, Vapi" },
-      { name: "description", content: "35+ years of experience in greenfield pharma projects, plant modernization, WHO-GMP, Revised Schedule M, ISO 15378, FAMI-QS and QMS consulting." },
+      {
+        name: "description",
+        content:
+          "35+ years of experience in greenfield pharma projects, plant modernization, WHO-GMP, Revised Schedule M, ISO 15378, FAMI-QS and QMS consulting.",
+      },
       { property: "og:title", content: "True Value Pharma Consultant" },
-      { property: "og:description", content: "Your trusted partner in pharmaceutical excellence — from concept to compliance." },
+      {
+        property: "og:description",
+        content: "Your trusted partner in pharmaceutical excellence — from concept to compliance.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -21,12 +28,26 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const stats = [["35+", "Years of industry experience"], ["9+", "Major consultancy projects"], ["6", "Industry sectors served"], ["1987", "B.Pharm, L.M. College of Pharmacy"]];
+const stats = [
+  ["35+", "Years of industry experience"],
+  ["9+", "Major consultancy projects"],
+  ["6", "Industry sectors served"],
+  ["1987", "B.Pharm, L.M. College of Pharmacy"],
+];
 
 const gallery = [
-  { src: exhibitionWide, alt: "Mr. Divyesh Shah standing at a clean room exhibition display with True Value branding" },
-  { src: booth, alt: "Mr. Divyesh Shah seated on a white sofa at the True Value exhibition booth, company logo on the backdrop" },
-  { src: founder, alt: "Mr. Divyesh Shah at the True Value exhibition counter with clean room equipment displays" },
+  {
+    src: exhibitionWide,
+    alt: "Mr. Divyesh Shah standing at a clean room exhibition display with True Value branding",
+  },
+  {
+    src: booth,
+    alt: "Mr. Divyesh Shah seated on a white sofa at the True Value exhibition booth, company logo on the backdrop",
+  },
+  {
+    src: founder,
+    alt: "Mr. Divyesh Shah at the True Value exhibition counter with clean room equipment displays",
+  },
 ];
 
 function Index() {
@@ -34,11 +55,13 @@ function Index() {
     <SiteLayout>
       <HeroSlider />
 
-
       <section className="border-b bg-card">
         <div className="mx-auto max-w-6xl px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map(([n, l], i) => (
-            <Reveal key={l} delay={i * 80}><p className="font-display text-4xl font-bold text-primary">{n}</p><p className="mt-1 text-sm text-muted-foreground">{l}</p></Reveal>
+            <Reveal key={l} delay={i * 80}>
+              <p className="font-display text-4xl font-bold text-primary">{n}</p>
+              <p className="mt-1 text-sm text-muted-foreground">{l}</p>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -51,7 +74,9 @@ function Index() {
         <div className="mt-10 grid gap-px bg-border border sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s, i) => (
             <div key={s.title} className="card-hover bg-card p-6">
-              <span className="font-display text-accent text-2xl font-bold">{String(i + 1).padStart(2, "0")}</span>
+              <span className="font-display text-accent text-2xl font-bold">
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <h3 className="mt-3 text-lg font-bold text-ink">{s.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
             </div>
@@ -61,13 +86,20 @@ function Index() {
 
       <section className="border-t">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary">True Value Pharma Consultant</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+            True Value Pharma Consultant
+          </p>
           <h2 className="mt-2 text-3xl md:text-4xl font-bold">Industry gallery</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {gallery.map((photo, i) => (
               <Reveal key={photo.alt} delay={i * 120}>
                 <figure className="card-hover">
-                  <img src={photo.src} alt={photo.alt} loading="lazy" className="img-hover aspect-[3/4] w-full rounded-md object-contain bg-secondary" />
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    loading="lazy"
+                    className="img-hover aspect-[3/4] w-full rounded-md object-contain bg-secondary"
+                  />
                 </figure>
               </Reveal>
             ))}
@@ -80,14 +112,23 @@ function Index() {
           <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold">Why clients trust us</h2>
             <blockquote className="mt-6 border-l-4 border-accent pl-5 text-lg italic text-ink">
-              "We don't just provide consultancy; we become your project partner, guiding you from concept to compliance with integrity, professionalism, and practical expertise."
+              "We don't just provide consultancy; we become your project partner, guiding you from
+              concept to compliance with integrity, professionalism, and practical expertise."
             </blockquote>
-            <Link to="/about" className="mt-6 inline-block font-semibold text-primary hover:underline">Meet our founder →</Link>
+            <Link
+              to="/about"
+              className="mt-6 inline-block font-semibold text-primary hover:underline"
+            >
+              Meet our founder →
+            </Link>
           </Reveal>
           <ul className="grid gap-3 sm:grid-cols-2">
             {strengths.map((s, i) => (
               <Reveal key={s} delay={i * 60}>
-                <li className="card-hover flex h-full gap-2 rounded-md border bg-card p-3 text-sm"><span className="text-accent font-bold">✓</span>{s}</li>
+                <li className="card-hover flex h-full gap-2 rounded-md border bg-card p-3 text-sm">
+                  <span className="text-accent font-bold">✓</span>
+                  {s}
+                </li>
               </Reveal>
             ))}
           </ul>
@@ -96,8 +137,15 @@ function Index() {
 
       <section className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-6xl px-6 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <h2 className="text-3xl font-bold max-w-xl">Planning a new plant or upgrading to Revised Schedule M? Let's build quality together.</h2>
-          <Link to="/contact" className="rounded-md bg-accent px-6 py-3 font-semibold text-accent-foreground">Get in touch</Link>
+          <h2 className="text-3xl font-bold max-w-xl">
+            Planning a new plant or upgrading to Revised Schedule M? Let's build quality together.
+          </h2>
+          <Link
+            to="/contact"
+            className="rounded-md bg-accent px-6 py-3 font-semibold text-accent-foreground"
+          >
+            Get in touch
+          </Link>
         </div>
       </section>
     </SiteLayout>
