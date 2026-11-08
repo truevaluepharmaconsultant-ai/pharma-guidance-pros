@@ -1,7 +1,7 @@
+import { founder } from "@/lib/images";
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { PageHeader, SiteLayout } from "@/components/SiteLayout";
-import founder from "@/assets/true-value-founder-final.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

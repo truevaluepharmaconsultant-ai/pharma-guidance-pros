@@ -9,4 +9,4 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Import edited website photographs as local image assets and preserve their portrait proportions, so the subject and signage remain visible.
+- Store website images in public/images and use the root-relative paths exported by src/lib/images so image delivery does not depend on bundler hashes or Lovable asset endpoints; preserve portrait proportions so subjects and signage remain visible.

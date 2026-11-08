@@ -1,8 +1,6 @@
+import { b1, b2, b3 } from "@/lib/images";
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import b1 from "@/assets/banner-1.jpg";
-import b2 from "@/assets/banner-2.jpg";
-import b3 from "@/assets/banner-3.jpg";
 
 const slides = [
   { img: b1, alt: "Modern pharmaceutical manufacturing plant", eyebrow: "Your trusted partner in pharmaceutical excellence", title: "From concept to compliance.", sub: "Greenfield projects and plant modernization for pharmaceutical, API, excipient, packaging, nutraceutical and veterinary manufacturers." },

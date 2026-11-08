@@ -1,9 +1,9 @@
+import { exhibitionWide } from "@/lib/images";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { CheckList, PageHeader, SiteLayout } from "@/components/SiteLayout";
 import { Button } from "@/components/ui/button";
 import { serviceGroups } from "@/lib/site";
-import exhibitionWide from "@/assets/true-value-exhibition-wide.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
