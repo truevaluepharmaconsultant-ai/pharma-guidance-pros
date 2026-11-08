@@ -1,17 +1,8 @@
+import { corridor, productionHall, chemicalLab, instrumentLab, steelStructure, office, qcBench, instrumentBench, cornerBench, stability } from "@/lib/images";
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { CheckList, PageHeader, SiteLayout } from "@/components/SiteLayout";
 import { partners, phases } from "@/lib/site";
-import corridor from "@/assets/approach/clean-room-corridor.jpg.asset.json";
-import productionHall from "@/assets/approach/clean-room-production-hall.jpg.asset.json";
-import chemicalLab from "@/assets/approach/chemical-testing-lab.jpg.asset.json";
-import instrumentLab from "@/assets/approach/instrument-lab.jpg.asset.json";
-import steelStructure from "@/assets/approach/greenfield-steel-structure.jpg.asset.json";
-import office from "@/assets/approach/consultation-office.jpg.asset.json";
-import qcBench from "@/assets/approach/qc-lab-bench.jpg.asset.json";
-import instrumentBench from "@/assets/approach/instrument-bench.jpg.asset.json";
-import cornerBench from "@/assets/approach/chemical-lab-corner-bench.jpg.asset.json";
-import stability from "@/assets/approach/stability-room.jpg.asset.json";
 
 export const Route = createFileRoute("/approach")({
   head: () => ({
@@ -32,18 +23,18 @@ const docs = ["SOP Preparation", "Validation Documents", "Qualification Document
 type Photo = { src: string; alt: string; caption: string };
 
 const tallPhotos: Photo[] = [
-  { src: corridor.url, alt: "Clean room corridor with blue GMP doors and glossy epoxy flooring", caption: "Clean room corridor — GMP partitions & epoxy flooring" },
-  { src: productionHall.url, alt: "Clean room production hall with stainless steel equipment enclosure", caption: "Production hall — clean room envelope & utilities" },
-  { src: chemicalLab.url, alt: "Blue door with signboard reading Chemical Testing Lab", caption: "Chemical testing lab" },
-  { src: instrumentLab.url, alt: "Blue door with signboard reading Instrument Lab", caption: "Instrument lab" },
+  { src: corridor, alt: "Clean room corridor with blue GMP doors and glossy epoxy flooring", caption: "Clean room corridor — GMP partitions & epoxy flooring" },
+  { src: productionHall, alt: "Clean room production hall with stainless steel equipment enclosure", caption: "Production hall — clean room envelope & utilities" },
+  { src: chemicalLab, alt: "Blue door with signboard reading Chemical Testing Lab", caption: "Chemical testing lab" },
+  { src: instrumentLab, alt: "Blue door with signboard reading Instrument Lab", caption: "Instrument lab" },
 ];
 
 const widePhotos: Photo[] = [
-  { src: office.url, alt: "Consultation cabin with meeting table, sofas and glass partition", caption: "Project review & consultation cabin" },
-  { src: qcBench.url, alt: "Quality control laboratory worktop with ovens, muffle furnace and water bath", caption: "QC laboratory — ovens, furnace & water bath" },
-  { src: instrumentBench.url, alt: "Laboratory bench with analytical balance and conductivity meter", caption: "Instrument bench — balance & conductivity meter" },
-  { src: cornerBench.url, alt: "Corner laboratory worktop with glassware and testing equipment", caption: "Chemical lab worktop & glassware" },
-  { src: stability.url, alt: "Stability room door with stored sample bottles in the laboratory", caption: "Stability room" },
+  { src: office, alt: "Consultation cabin with meeting table, sofas and glass partition", caption: "Project review & consultation cabin" },
+  { src: qcBench, alt: "Quality control laboratory worktop with ovens, muffle furnace and water bath", caption: "QC laboratory — ovens, furnace & water bath" },
+  { src: instrumentBench, alt: "Laboratory bench with analytical balance and conductivity meter", caption: "Instrument bench — balance & conductivity meter" },
+  { src: cornerBench, alt: "Corner laboratory worktop with glassware and testing equipment", caption: "Chemical lab worktop & glassware" },
+  { src: stability, alt: "Stability room door with stored sample bottles in the laboratory", caption: "Stability room" },
 ];
 
 function PhotoCard({ photo, ratio }: { photo: Photo; ratio: string }) {
@@ -85,7 +76,7 @@ function Approach() {
         <Reveal>
           <figure className="card-hover group relative overflow-hidden rounded-lg border bg-card shadow-sm">
             <img
-              src={steelStructure.url}
+              src={steelStructure}
               alt="Steel structural framework of a new pharmaceutical plant under construction"
               loading="lazy"
               className="img-hover h-64 w-full object-cover sm:h-80 lg:h-[26rem]"

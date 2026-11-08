@@ -1,27 +1,19 @@
+import { inovet, khushboo, allied, krish, kk, mystical, dymach, svMulti, svInd } from "@/lib/images";
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { CheckList, PageHeader, SiteLayout } from "@/components/SiteLayout";
 import { projects } from "@/lib/site";
-import inovet from "@/assets/projects/inovet-pharma.jpg.asset.json";
-import khushboo from "@/assets/projects/khushboo-beauty-care.jpg.asset.json";
-import allied from "@/assets/projects/allied-plastics.jpg.asset.json";
-import krish from "@/assets/projects/krish-chemicals.png.asset.json";
-import kk from "@/assets/projects/kk-animal-health.jpg.asset.json";
-import mystical from "@/assets/projects/mystical-group.jpg.asset.json";
-import dymach from "@/assets/projects/dy-mach-chemicals.png.asset.json";
-import svMulti from "@/assets/projects/shree-vardhan-multitech.png.asset.json";
-import svInd from "@/assets/projects/shree-vardhan-industries.png.asset.json";
 
 const photos: Record<string, string> = {
-  "Inovet Pharma": inovet.url,
-  "Khushboo Beauty Care": khushboo.url,
-  "Allied Plastics": allied.url,
-  "Krish Chemicals": krish.url,
-  "K.K. Animal Health": kk.url,
-  "Mystical Group": mystical.url,
-  "DY Mach Chemicals": dymach.url,
-  "Shree Vardhan Multitech": svMulti.url,
-  "Shree Vardhan Industries": svInd.url,
+  "Inovet Pharma": inovet,
+  "Khushboo Beauty Care": khushboo,
+  "Allied Plastics": allied,
+  "Krish Chemicals": krish,
+  "K.K. Animal Health": kk,
+  "Mystical Group": mystical,
+  "DY Mach Chemicals": dymach,
+  "Shree Vardhan Multitech": svMulti,
+  "Shree Vardhan Industries": svInd,
 };
 
 export const Route = createFileRoute("/projects")({

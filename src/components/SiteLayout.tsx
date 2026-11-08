@@ -1,6 +1,6 @@
+import { logo } from "@/lib/images";
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import logo from "@/assets/logo.jpg";
 import { contact } from "@/lib/site";
 
 const nav = [
