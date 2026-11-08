@@ -26,3 +26,6 @@ export const instrumentBench = "/images/approach/instrument-bench.jpg";
 export const cornerBench = "/images/approach/chemical-lab-corner-bench.jpg";
 export const stability = "/images/approach/stability-room.jpg";
 export const digitalCard = "/images/true-value-digital-card.png";
+export const qmsIllustration = "/images/services/quality-management-systems.png";
+export const vialFilling = "/images/services/vial-filling.jpg";
+export const plantProject = "/images/services/plant-project.jpg";
