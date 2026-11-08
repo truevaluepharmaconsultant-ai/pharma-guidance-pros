@@ -63,14 +63,14 @@ function Services() {
         {serviceGroups.map((g, i) => (
           <Reveal key={g.title} delay={(i % 3) * 100} className="h-full">
             <div className="card-hover flex h-full flex-col overflow-hidden rounded-lg border bg-card">
-              {g.title === "Quality Management Systems" && (
-                <img src={qmsIllustration} alt="Quality management systems illustration: QC checklist, tablet press and measuring instruments" width={722} height={558} loading="lazy" className="img-hover w-full border-b bg-white" />
-              )}
               <div className="p-6">
                 <span className="font-display text-3xl font-bold text-accent">{String(i + 1).padStart(2, "0")}</span>
                 <h2 className="mt-2 text-xl font-bold text-ink">{g.title}</h2>
                 <CheckList items={g.items} />
               </div>
+              {g.title === "Quality Management Systems" && (
+                <img src={qmsIllustration} alt="Quality management systems illustration: QC checklist, tablet press and measuring instruments" width={722} height={558} loading="lazy" className="img-hover mt-auto w-full border-t bg-white" />
+              )}
             </div>
           </Reveal>
         ))}
