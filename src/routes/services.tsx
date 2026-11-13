@@ -1,9 +1,15 @@
-import { exhibitionWide, plantProject, qmsIllustration, vialFilling } from "@/lib/images";
+import { documentationValidation, exhibitionWide, plantProject, qmsIllustration, trainingCompetency, vialFilling } from "@/lib/images";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { CheckList, PageHeader, SiteLayout } from "@/components/SiteLayout";
 import { Button } from "@/components/ui/button";
 import { serviceGroups } from "@/lib/site";
+
+const cardIllustrations: Partial<Record<string, { src: string; alt: string; width: number; height: number }>> = {
+  "Quality Management Systems": { src: qmsIllustration, alt: "Quality management systems illustration: QC checklist, tablet press and measuring instruments", width: 722, height: 558 },
+  "Documentation & Validation": { src: documentationValidation, alt: "Documentation and validation illustration: SOPs, validation agenda checklist, stamp and folder", width: 524, height: 494 },
+  "Training & Competency Development": { src: trainingCompetency, alt: "Training and competency development illustration: a team learning session around a presentation screen", width: 588, height: 536 },
+};
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -60,7 +66,9 @@ function Services() {
         </div>
       </section>
       <section className="mx-auto max-w-6xl px-6 py-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {serviceGroups.map((g, i) => (
+        {serviceGroups.map((g, i) => {
+          const ill = cardIllustrations[g.title];
+          return (
           <Reveal key={g.title} delay={(i % 3) * 100} className="h-full">
             <div className="card-hover flex h-full flex-col overflow-hidden rounded-lg border bg-card">
               <div className="p-6">
@@ -68,12 +76,13 @@ function Services() {
                 <h2 className="mt-2 text-xl font-bold text-ink">{g.title}</h2>
                 <CheckList items={g.items} />
               </div>
-              {g.title === "Quality Management Systems" && (
-                <img src={qmsIllustration} alt="Quality management systems illustration: QC checklist, tablet press and measuring instruments" width={722} height={558} loading="lazy" className="img-hover mt-auto w-full border-t bg-white" />
+              {ill && (
+                <img src={ill.src} alt={ill.alt} width={ill.width} height={ill.height} loading="lazy" className="img-hover mt-auto w-full border-t bg-white" />
               )}
             </div>
           </Reveal>
-        ))}
+          );
+        })}
       </section>
       <section className="border-y bg-background" aria-labelledby="filling-line-heading">
         <div className="mx-auto max-w-6xl grid items-center gap-10 px-6 py-16 md:grid-cols-2">

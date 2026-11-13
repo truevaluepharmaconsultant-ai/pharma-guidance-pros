@@ -29,3 +29,5 @@ export const digitalCard = "/images/true-value-digital-card.png";
 export const qmsIllustration = "/images/services/quality-management-systems.png";
 export const vialFilling = "/images/services/vial-filling.jpg";
 export const plantProject = "/images/services/plant-project.jpg";
+export const documentationValidation = "/images/services/documentation-validation.png";
+export const trainingCompetency = "/images/services/training-competency.png";
