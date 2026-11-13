@@ -4,6 +4,7 @@
 
 # Services page pictures
 - [x] Place the three distinct uploaded pictures across the Services page and verify display.
+- [x] Place the Documentation & Validation and Training & Competency Development pictures in their matching service cards and verify display.
 
 # Production image repair
 - [x] Place all website image files in public/images and use root-relative URLs.
