@@ -1,4 +1,4 @@
-import { documentationValidation, exhibitionWide, plantProject, qmsIllustration, trainingCompetency, vialFilling } from "@/lib/images";
+import { documentationValidation, plantProject, qmsIllustration, trainingCompetency, vialFilling } from "@/lib/images";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { CheckList, PageHeader, SiteLayout } from "@/components/SiteLayout";
@@ -101,8 +101,7 @@ function Services() {
         </div>
       </section>
       <section className="bg-secondary">
-        <div className="mx-auto max-w-6xl grid items-center gap-10 px-6 py-16 md:grid-cols-2">
-          <img src={exhibitionWide} alt="Mr. Divyesh Shah alongside a clean room display with True Value branding" width={768} height={1029} loading="lazy" className="img-hover mx-auto aspect-[3/4] w-full max-w-sm rounded-md object-contain" />
+        <div className="mx-auto max-w-3xl px-6 py-16">
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">Engineering & facility design</p>
             <h2 className="mt-3 text-3xl font-bold text-ink">Clean room & HVAC consultancy</h2>
